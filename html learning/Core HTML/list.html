@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+<body>
+    <h1>Unordered List</h1>
+    <!-- Unordered List (<ul>) : Uses bullet points (•, ○, ■) by default.The order of items is not important. Used for lists where sequence or ranking does not matter. -->
+    <!-- Use case: Navigation menus, feature lists, grocery lists, etc. -->
+    <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Oranges</li>
+    </ul>
+    
+
+    <h1>Ordered List</h1>
+    <!-- Ordered List (<ol>) : Uses numbers (1, 2, 3, …) or letters (a, b, c, …) by default. The order of items matters. Used when sequence, steps, or ranking is important. -->
+    
+    <ol>
+        <li>Preheat the oven</li>
+        <li>Mix ingredients</li>
+        <li>Bake for 30 minutes</li>
+    </ol>
+        
+    <h2>Ordered list with a custom value</h2>
+    <ol type="I">
+        <li value="3">third item</li>
+        <li>fourth item</li>
+        <li>fifth item</li>
+    </ol>
+
+    <h2>Definition List</h2>
+    <!-- The <dl> (Definition List) in HTML is used to display a list of terms with their corresponding definitions. It differs from <ul> and <ol> because it does not use bullet points or numbers. Instead, it consists of three elements:
+
+    <dl> – Defines the start and end of the definition list.
+    <dt> (Definition Term) – Represents the term or item being defined.
+    <dd> (Definition Description) – Provides the explanation or details of the term. -->
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language - used for creating web pages.</dd>
+    
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets - used for styling web pages.</dd>
+    
+        <dt>JavaScript</dt>
+        <dd>A scripting language used to create dynamic web content.</dd>
+    </dl>
+
+
+    <h2>Nested Lists</h2>
+    <!-- Nested Unordered List (<ul> inside <ul>) -->
+    <ul>
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrot</li>
+                <li>Spinach</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <!-- Nested Ordered List (<ol> inside <ol>) -->
+    <ol>
+        <li>Morning Routine
+            <ol>
+                <li>Wake up</li>
+                <li>Brush teeth</li>
+                <li>Exercise</li>
+            </ol>
+        </li>
+        <li>Work Tasks
+            <ol>
+                <li>Check emails</li>
+                <li>Attend meetings</li>
+                <li>Complete reports</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- Mixing Ordered and Unordered Lists (<ol> inside <ul>) -->
+    <ul>
+        <li>Frontend Technologies
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+        </li>
+        <li>Backend Technologies
+            <ol>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+            </ol>
+        </li>
+    </ul>
+        
+    
+    
+    <!-- Nested Definition List (<dl> inside <dl>) -->
+    <dl>
+        <dt>Frontend</dt>
+        <dd>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Used for structuring web pages.</dd>
+                <dt>CSS</dt>
+                <dd>Used for styling web pages.</dd>
+            </dl>
+        </dd>
+    
+        <dt>Backend</dt>
+        <dd>
+            <dl>
+                <dt>Node.js</dt>
+                <dd>A JavaScript runtime for backend development.</dd>
+                <dt>MongoDB</dt>
+                <dd>A NoSQL database for storing data.</dd>
+            </dl>
+        </dd>
+    </dl>
+        
+    
+      
+</body>
+</html>
