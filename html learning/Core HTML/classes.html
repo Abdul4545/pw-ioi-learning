@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and ID</title>
+    <style>
+        .BATCH-1 {
+            font-family: system-ui;
+            font-size: larger;
+            color: brown;
+        }
+
+        .BATCH-2 {
+            font-family: Cambria;
+            font-size: x-large;
+            color: green;
+        }
+
+        .first {
+            color: darkblue;
+            font-size: 2em;
+        }
+
+        ._1st {
+            color: red;
+        }
+
+        #name {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- The HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class. -->
+    
+    <!-- The class attribute can be used on any HTML element. The class name is case sensitive! -->
+
+    <!--
+        Naming Convention
+        1) Must start with a letter (a-z, A-Z)
+        2) Can contain numbers (0-9) after the first letter
+        3) Can include hyphens (-), underscores (_), and letters
+    -->
+
+    <p class="BATCH-1">Sahil</p>
+    <p class="BATCH-1">Rehan</p>
+    <p class="BATCH-1">Sumit</p>
+    <p class="BATCH-1">Saad</p>
+    <p class="BATCH-1">Gopal</p>
+    <p class="BATCH-1">Riya</p>
+
+    <p class="BATCH-2">Sahil</p>
+    <p class="BATCH-2">Rehan</p>
+    <p class="BATCH-2">Sumit</p>
+    <p class="BATCH-2">Saad</p>
+    <p class="BATCH-2">Gopal</p>
+    <p class="BATCH-2">Riya</p>
+
+    <p class="first">I am first</p>
+    <p class="1st">I am second</p>
+    <p class="_1st">I am third</p>
+    <p class="@1st">I am fourth</p>
+
+    <!-- The id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document. But if you assign the same value to more than 1 element then it will work and cause no error. The id atttribute is basically used to uniquely identify and element, if we are using the same value for more than 1 element then no benefit of using id attribute. -->
+
+    <h1 id="name">Abdul Moid</h1>
+    <h1 id="name">Saad</h1>
+
+</body>
+</html>
