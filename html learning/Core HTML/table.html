@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <table>: Defines the table. -->
+    <table>
+        
+        <!-- <thead>: Groups the header content of the table. -->
+        <thead>
+            <!-- <tr> (Table Row): Defines a row in the table. -->
+            <tr> 
+                <!-- <th> (Table Header Cell): Defines a header cell, usually bold and centered by default. -->
+                <!-- rowspan: Merges multiple rows into one. Used to merge "Category" and "Fruits" cells. -->
+                <th rowspan="2">Category</th>
+                <!-- colspan: Merges multiple columns into one. Used in the second row of <thead> and the footer row. -->
+                <th colspan="2">Details</th>
+                <th rowspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+
+        <!-- <tbody>: Groups the main content (body) of the table. -->
+        <tbody>
+            <tr>
+                <!-- <td> (Table Data Cell): Defines a normal table cell. -->
+                <td rowspan="2">Fruits</td>
+                <td>Apple</td>
+                <td>5</td>
+                <td>RS 120</td>
+            </tr>
+
+            <tr>
+                <td>Banana</td>
+                <td>10</td>
+                <td>RS 58</td>
+            </tr>
+
+            <tr>
+                <td>Vegetables</td>
+                <td>Carrot</td>
+                <td>7</td>
+                <td>RS 15</td>
+            </tr>
+        </tbody>
+
+        <!-- <tfoot>: Groups the footer content of the table (often used for summaries or totals). -->
+        <tfoot>
+            <tr>
+                <td colspan="3"><b>Total Price</b></td>
+                <td><b>RS 193</b></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
+    
