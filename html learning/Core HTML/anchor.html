@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Tag</title>
+</head>
+<body>
+    <!-- The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. -->
+    
+    <!-- The <a> (anchor) tag in HTML is used to create hyperlinks, allowing users to navigate between different pages, sections of the same page, or external websites. -->
+
+    <a href="https://www.google.com">Open Google</a> <!-- Absolute URL -->
+    <br>
+    <!-- href (Hyperlink Reference) : Defines the destination URL or path. The text between the <a> and </a> tags is the clickable part of the link. -->
+
+    <!-- Linking internal file -->
+    <a href="../Core HTML/list.html">Go to list page</a>
+    <br>
+
+    <!-- Target attribute : It specifies when to open the URL, either in the same page or tab, or in different tab -->
+    
+    <!-- 1) _self (Default - Opens in the Same Tab/Window) -->
+    <a href="https://www.google.com">Open Google in same tab</a>
+    <br>
+
+    <!-- 2) _blank (Opens in a New Tab/Window) :  -->
+    <a href="https://www.google.com" target="_blank">Open Google in new tab</a>
+    <br>
+    
+    <!-- 3) _parent (Opens in the Parent Frame) -->
+    <iframe src="child.html" name="childFrame"></iframe>
+    <a href="https://www.google.com" target="_parent">Open Google in parent</a>
+
+    <!-- 4) _top (Opens in the Full Page, Ignoring Frames) -->
+    <iframe src="child.html" name="childFrame"></iframe>
+    <a href="https://www.google.com" target="_top">Open Google in parent</a>
+    <br>
+
+    <a href="#section-2">Go to Section 2</a>
+
+    <div id="section-1" style="height: 700px; margin-top: 20px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolore deleniti maiores nesciunt vel ex, quod minus iste, quos blanditiis eius harum debitis quas. Modi, animi ducimus. Amet quae sapiente, asperiores totam blanditiis ex sequi eveniet quas aperiam suscipit deleniti ad illum, ratione odit provident quis nam voluptate vitae placeat delectus? Ipsum ipsa tempora non esse eum reiciendis consectetur earum quo mollitia ullam labore, nihil neque in eaque omnis incidunt consequatur suscipit molestiae? Incidunt sit placeat vero earum neque a aspernatur? Ullam quibusdam commodi distinctio eum qui quod perferendis aliquam ipsam. Ex, facere? Ab nulla eius cum quibusdam perferendis a totam, consequuntur quaerat provident libero qui architecto laudantium, est, assumenda ex sequi harum deserunt exercitationem minima suscipit quidem consectetur corporis debitis nam. Veritatis est nulla reiciendis deleniti aliquam doloremque impedit explicabo omnis vel accusantium, voluptate et deserunt perspiciatis provident nesciunt quam animi ratione aperiam assumenda! Commodi, porro sit sed rerum aut vitae sequi dignissimos. Doloribus fugit commodi fuga blanditiis, corporis possimus eaque delectus iure rerum? Mollitia earum, maxime libero autem tenetur labore ratione minus quo quos fuga voluptates! Delectus cum labore optio perferendis aspernatur libero impedit provident. Magni, nemo architecto velit illum beatae, impedit quis dolor quod est natus nisi?
+    </div>
+
+    <div id="section-2" style="height: 700px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolore deleniti maiores nesciunt vel ex, quod minus iste, quos blanditiis eius harum debitis quas. Modi, animi ducimus. Amet quae sapiente, asperiores totam blanditiis ex sequi eveniet quas aperiam suscipit deleniti ad illum, ratione odit provident quis nam voluptate vitae placeat delectus? Ipsum ipsa tempora non esse eum reiciendis consectetur earum quo mollitia ullam labore, nihil neque in eaque omnis incidunt consequatur suscipit molestiae? Incidunt sit placeat vero earum neque a aspernatur? Ullam quibusdam commodi distinctio eum qui quod perferendis aliquam ipsam. Ex, facere? Ab nulla eius cum quibusdam perferendis a totam, consequuntur quaerat provident libero qui architecto laudantium, est, assumenda ex sequi harum deserunt exercitationem minima suscipit quidem consectetur corporis debitis nam. Veritatis est nulla reiciendis deleniti aliquam doloremque impedit explicabo omnis vel accusantium, voluptate et deserunt perspiciatis provident nesciunt quam animi ratione aperiam assumenda! Commodi, porro sit sed rerum aut vitae sequi dignissimos. Doloribus fugit commodi fuga blanditiis, corporis possimus eaque delectus iure rerum? Mollitia earum, maxime libero autem tenetur labore ratione minus quo quos fuga voluptates! Delectus cum labore optio perferendis aspernatur libero impedit provident. Magni, nemo architecto velit illum beatae, impedit quis dolor quod est natus nisi?
+    </div>
+
+    <a href="#section-1">Go to Section 1</a>
+
+    <!-- The rel attribute defines the relationship between a linked resource and the current document. -->
+
+    
+</body>
+</html>
