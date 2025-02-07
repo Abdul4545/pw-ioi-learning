@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio and its Attributes</title>
+  </head>
+  <body>
+    <!-- The <audio> HTML element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the <source> element: the browser will choose the most suitable one.-->
+
+    <audio src="../alone-audio.mp3" controls autoplay></audio>
+    <!-- <audio>: The main tag to embed audio. -->
+    <!-- controls: Displays built-in audio controls (play, pause, volume, etc.). It is necessary attribute -->
+
+    <!-- <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+      <source src="audio.ogg" type="audio/ogg" />
+      <source src="audio.wav" type="audio/wav" />
+      Your browser does not support the audio element.
+    </audio> -->
+    <!-- <source>: Defines multiple audio file formats for compatibility. -->
+    <!-- autoplay : The audio will start playing automatically when the page loads. -->
+    <!-- loop : Repeats the audio continuously. -->
+    <!-- muted : Starts the audio in a muted state. -->
+
+    <!-- 
+        preload : Specifies how the browser should load the audio.
+        Values:
+        none: The browser should not load the audio until the user plays it.
+        metadata: Only loads metadata (duration, dimensions, etc.).
+        auto: Loads the whole audio file. 
+    -->
+
+    <!-- <audio id="myAudio" src="../alone-audio.mp3"></audio>
+    <input type="range" min="0" max="1" step="0.1" oninput="adjustVolume(this.value)">
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+
+
+    <script>
+      let audio = document.getElementById("myAudio");
+
+      function playAudio() {
+        audio.play();
+      }
+
+      function pauseAudio() {
+        audio.pause();
+      }
+
+      function adjustVolume(value) {
+        audio.volume = value;
+      }
+    </script> -->
+
+  </body>
+</html>
