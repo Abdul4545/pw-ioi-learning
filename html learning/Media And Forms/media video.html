@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video and its attributes</title>
+  </head>
+  <body>
+    
+    <!-- The <video> HTML element embeds a media player which supports video playback into the document. -->
+
+    <video src="../flower.webm" type="mp4/webm" controls></video>
+
+    <!-- Use src attribute when you need to use single format for the element -->
+    <!-- 
+        <video>: The main tag used to embed the video.
+        controls: Adds play, pause, volume, and other controls.
+        <source>: Specifies multiple video formats to ensure compatibility across browsers.  
+    -->
+
+    <!-- <video controls>
+      <source src="video.mp4" type="video/mp4" />
+      <source src="video.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video> -->
+
+    <!-- 
+        Attribute	    Description
+        src	            Specifies the video file (alternative to <source>).
+        controls	    Adds built-in video controls (play, pause, volume, etc.).
+        autoplay	    Starts playing the video automatically (muted for most browsers).
+        loop	        Repeats the video indefinitely.
+        muted	        Mutes the video by default.
+        poster	        Defines an image to display before the video starts.
+        width & height	Defines the dimensions of the video player.
+    -->
+
+    <video src="../kids-video.mp4" controls autoplay loop muted poster="../image-1.jpg"></video>
+
+    <!-- NOTE : You cannot directly use a YouTube (or other third-party video hosting) link inside the <video> tag's src attribute. -->
+    
+    <!-- if the video file is directly accessible (like an MP4 file hosted on a server), it will work. -->
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls width="400px"></video> 
+
+</body>
+</html>
