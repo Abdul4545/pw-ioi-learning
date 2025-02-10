@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+  </head>
+  <body>
+    <!-- 
+        An HTML form is a section of a webpage that contains interactive elements (like text fields, buttons, and checkboxes) to collect user input. Forms are crucial for user interaction on websites, allowing users to submit data such as login credentials, search queries, and feedback.
+    -->
+
+    <!-- 
+        Form attributes define how the form behaves.
+        action – The URL where form data is sent.
+        method – The HTTP method (GET or POST).
+        autocomplete – Enables or disables browser auto-filling.
+        target – Specifies where to open the response (_self, _blank).
+        novalidate – Disables validation.
+    -->
+
+    <!-- 
+        HTML form elements include various input fields, buttons, and selection controls.
+        Common Elements:
+        <input> – Used for text, email, password, etc.
+        <label> – Describes form inputs.
+        <select> – Dropdown menus.
+        <textarea> – Multi-line text fields.
+        <button> – Submits or resets forms.
+        <fieldset> & <legend> – Group related fields.
+    -->
+
+    <!--
+        When a user submits a form, the data is sent to the server.
+
+        Methods:
+        GET – Appends data to the URL (used for search forms).
+        POST – Sends data securely (used for login, payments).
+    -->
+
+    <!--
+        <input> and Its Attributes
+        The <input> element collects user input.
+
+        Common Input Types:
+        text – General text input.
+        email – Email validation.
+        password – Hidden characters for security.
+        number – Only numeric values allowed.
+        checkbox – Multiple selections.
+        radio – Single selection from multiple options.
+        date – Select a date.
+        file – Upload a file.
+    -->
+
+    <!--
+        <label>
+        The <label> element improves form accessibility.
+    -->
+
+    <!--
+        <textarea>    
+        The <textarea> element allows users to enter long text.
+    -->
+
+    <!--
+        <button> (Submit, Reset, or General Button)
+        The <button> element is used for form submission.
+    -->
+
+    <!-- 
+        <fieldset> & <legend>
+        The <fieldset> groups related form fields, while <legend> provides a title.
+        The <fieldset> tag draws a box around the related elements.
+        The <legend> tag is used to define a caption for the <fieldset> element.
+    -->
+
+    <!--
+        <option>
+        The <option> element defines choices inside <select>.
+        <select> (Dropdown Menu)
+        Provides a predefined list of options.
+        The user can only select from the available choices.
+        It ensures data consistency since users cannot enter custom values.
+    -->
+
+    <!--
+        <datalist> (Auto-suggestions)
+        The <datalist> element provides predefined suggestions for <input>.
+    -->
+
+    <form action="">
+      <fieldset>
+        <legend>Username</legend>
+        <!-- <label for="username">Name:</label> -->
+        <input type="text" id="username" name="username" />
+      </fieldset>
+      <br />
+      <br />
+      <label for="useremail">Email:</label>
+      <input type="email" id="useremail" name="useremail" />
+      <br />
+      <br />
+      <label for="userDOB">DOB: </label>
+      <input type="date" name="userDOB" id="userDOB" />
+      <br />
+      <br />
+
+      <p>Choose your gender :</p>
+      <input type="radio" name="gender" id="male" value="Male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="Female" />
+      <label for="female">Female</label>
+      <br /><br />
+
+      <p>Choose Subjects You Like</p>
+      <input type="checkbox" id="html" name="html" value="HTML" />
+      <label for="html">HTML</label><br />
+
+      <input type="checkbox" id="css" name="CSS" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input
+        type="checkbox"
+        id="programming"
+        name="programming"
+        value="C/C++"
+      />
+      <label for="programming">C/C++</label><br />
+
+      <p>Upload your photo</p>
+      <input type="file" name="profile-image" id="profile-image" />
+      <br /><br />
+
+      <label for="state">Choose your State :</label>
+      <select name="state" id="state">
+        <option value="up">UP</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="mp">MP</option>
+        <option value="bihar">Bihar</option>
+      </select>
+      <br /><br />
+
+      <label for="city">Enter your City:</label>
+      <input list="cities" id="city" name="city" />
+      <datalist id="cities">
+        <option value="Lucknow">
+        <option value="Kanpur">
+        <option value="Patna">
+      </datalist>
+      <br /><br />
+
+      <label for="useraddress">Address:</label>
+      <textarea name="useraddess" id="useraddress"></textarea>
+      <br /><br />
+
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
