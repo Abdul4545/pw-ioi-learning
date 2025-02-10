@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Entities</title>
+  </head>
+  <body>
+    <!-- 
+        HTML entities are special codes used to represent characters that have reserved meanings in HTML or cannot be typed directly using a keyboard. They are typically used to display characters such as <, >, &, ©, ™, and many more. Entity names are easier to remember than entity numbers. To display a less than sign (<) we must write: &lt; or &#60;
+    -->
+
+    <p>This is an example of an HTML entity: &lt;div&gt;</p>
+    <p>Use the &lt;strong&gt; tag to make text bold.</p>
+
+    <!--
+        Result  Description             Name        
+        &	    ampersand	            &amp;	    	
+        "	    double quotation mark	&quot;	    	
+        '	    single quotation mark	&apos;	    	
+        ¢	    cent	                &cent;	    	
+        £	    pound	                &pound;	    	
+        ¥	    yen	                    &yen;	    	
+        €	    euro	                &euro;	    
+        ©	    copyright	            &copy;	    	
+        ®	    trademark	            &reg;
+                non-breaking space	    &nbsp
+        <--     left arrow              &larr
+    -->
+    <!-- A non-breaking space is a space that will not break into a new line. -->
+
+    <!--
+            ASCII Character Set and Unicode
+            ASCII (American Standard Code for Information Interchange)
+            ASCII is a 7-bit character encoding standard used to represent English characters. It includes:
+            0-31: Control characters (e.g., newline, tab)
+            32-126: Printable characters (letters, numbers, symbols)
+            127: Delete
+            Example of ASCII characters:
+            A = 65, B = 66, C = 67, etc.
+
+            Unicode is a universal character set that supports characters from multiple languages and scripts worldwide. It extends ASCII and includes thousands of characters.
+            Example : "&#128512" means 😊
+    -->
+
+    <!--
+        <kbd> (Keyboard Input)
+        The <kbd> tag is used to display keyboard input, making it appear as if typed.
+    -->
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+
+    <!-- 
+        The <code> tag in HTML is used to display text as code. It ensures that the text inside it is rendered in a monospace font, which is commonly used for displaying programming code, making it easier to read and distinguish from regular text.
+        Displays code snippets inline or as block code. Retains whitespace, indentation, and formatting when combined with <pre>.
+        Examples are below : 
+    -->
+    <p>Use the <code>print()</code> function in Python to display output.</p>
+    <pre>
+    <code>
+    function greet(name) {
+        return "Hello, " + name + "!";
+    }
+    </code>
+    </pre>
+
+  </body>
+</html>
