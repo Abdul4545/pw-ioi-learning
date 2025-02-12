@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ways to add CSS</title>
+    <style>
+        h2 {
+            color: blueviolet;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- 
+        There are three ways to add css to a file and apply it to the elements
+        1) Inline CSS
+        2) Internal CSS
+        3) External CSS 
+    -->
+
+    <h1 style="color: blueviolet;">Inline CSS</h1>
+    <!--
+        In inline css we write the css key value pair in the style attribute of the element for which we are trying to add styling. 
+    -->
+
+    <h2>Internal CSS</h2>
+    <!--
+        In internal CSS we write the css code inside the style tag in the head tag part, we select the element on which we want to apply the css property and then use curly braces and then apply css key value pair property to that element.
+    -->
+
+    <h3>External CSS</h3>
+    <!--
+        For external css we make a file with the extension .css and we link that file in the html file inside the head tag using link tag.
+
+        <link rel="stylesheet" href="style.css"> 
+        The link tag is a self closing tag and rel="stylesheet" is used to specify that the file which is linked is a stylesheet file,
+        and href="style.css" is used to specify which css file you want to attack with this html document. The css file name can be anything but must have extension .css
+    -->
+
+</body>
+</html>
