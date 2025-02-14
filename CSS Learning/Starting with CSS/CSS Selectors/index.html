@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        p {
+            color: red;
+        }
+        /* The Tagname selector selects all the Elements which is of that tag */
+
+        .para {
+            color: blue;
+        }
+        /* The class selector selects all the Elements which have the same value for their class attribute, class selector overrides the css properties applied by tagname selector. */
+        
+
+        #specialPara {
+            color: green;
+        }
+        /* The id selector selects all the Element which have the same value for their id, it override the css properties applied by tagname selector as well as class selector. We can apply same css property to more than 1 element using same id selector if they have the same id value in their attribute, but it is not recommended to do so, as it will serve as class selector, we should have a single element in our document with a specific id value. Id value should not be duplicate.*/
+
+        h1, span {
+            color: blueviolet;
+        }
+        /* Grouping selector : We do grouping of selectors if we want to apply the same css property to more than 1 element. The grouping can be done with anything like tagname, id, class. */
+
+        * {
+            background-color: bisque;
+        }
+        /* The CSS universal selector (*) selects all elements of any type. We basically use it to apply font-family etc in our webpage for uniformity. */
+
+    </style>
+</head>
+<body>
+    <p>I am paragraph 1</p>
+    <p>I am paragraph 2</p>
+    <p>I am paragraph 3</p>
+
+    <p class="para">I am paragraph 1 with class para</p>
+    <p class="para">I am paragraph 2 with class para</p>
+    <p class="para">I am paragraph 3 with class para</p>
+
+    <p id="specialPara">I am paragraph with id paragraph</p>
+
+    <h1>Hello World</h1>
+    <span>How are you ?</span>
+
+</body>
+</html>
