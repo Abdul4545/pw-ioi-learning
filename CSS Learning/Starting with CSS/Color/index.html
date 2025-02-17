@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Color</title>
+    <style>
+        
+        .name {
+            color: blue;
+        }
+        /* In CSS,Color names are predefined. We can use predefined color names like red, blue, green, etc. to color the elements. */
+
+        .hex-color {
+            color: #ff7c47;
+            background-color: #000000;
+        }
+        /* 
+            A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color. 
+            To display black, set all color parameters to 00, like this: #000000.
+            To display white, set all color parameters to ff, like this: #ffffff.
+            Similarly you can create different colors with these 6 hex code values according to your need 
+        */
+
+
+        .rgb {
+            color: rgb(0, 255, 0);
+        }
+        /*
+            RGB (Red, Green, Blue) : RGB colors define colors using the RGB color model. Each value ranges from 0 to 255.
+            For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255), and the other two (green and blue) are set to 0.
+            Another example, rgb(0, 255, 0) is displayed as green, because green is set to its highest value (255), and the other two (red and blue) are set to 0.
+            To display black, set all color parameters to 0, like this: rgb(0, 0, 0).
+            To display white, set all color parameters to 255, like this: rgb(255, 255, 255).
+        */
+
+        
+        .rgba {
+            color: rgba(255,0,0, 0.3);
+        }
+        /*
+            RGBA (Red, Green, Blue, Alpha) : RGBA is an extension of RGB with an alpha channel for opacity. The alpha value ranges from 0 (completely transparent) to 1 (completely opaque).
+        */
+
+        .hsl {
+            background-color: hsl(170, 50%, 50%);
+            color: hsl(0, 50%, 50%);
+
+        }
+
+        /*
+            HSL stands for Hue, Saturation, and Lightness.
+            HSL color values are specified with:
+            hsl(hue, saturation, lightness)
+            Hue is a degree on the color wheel from 0 to 360. 0 (or 360) is red, 120 is green, 240 is blue.
+            Saturation can be described as the intensity of a color. It is a percentage value from 0% to 100%.
+            100% is full color, no shades of gray.
+            50% is 50% gray, but you can still see the color.
+            0% is completely gray; you can no longer see the color.
+            The lightness of a color can be described as how much light you want to give the color, where 0% means no light (dark), 50% means 50% light (neither dark nor light), and 100% means full light.
+        */
+
+        .hsla {
+            background-color:hsla(120, 100%, 50%, 0.2);
+        }
+
+        /*
+        HSLA color values are an extension of HSL color values, with an Alpha channel - which specifies the opacity for a color.
+        An HSLA color value is specified with:
+        hsla(hue, saturation, lightness, alpha)
+        The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+        */
+
+        
+        /*
+        The opacity property sets the opacity level for an element.
+        The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is completely transparent.
+        */
+
+    </style>
+</head>
+<body>
+    <p class="name">Coloured Using color name</p>
+    <p class="hex-color">I m coloured using hexadecimal value</p>
+    <p class="rgb">I am coloured using RGB value</p>
+    <h1 class="rgba">I am coloured using RGBA value</h1>
+    <h1 class="hsl">I am coloured using HSL value</h1>
+    <h1 class="hsla">I am coloured using HSLA value</h1>
+
+</body>
+</html>
