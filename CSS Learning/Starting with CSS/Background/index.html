@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with background</title>
+
+    <style>
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            color: red; 
+            font-size: 2em;
+        }
+        /*
+            The background-color property sets the background color of an element.
+            The background of an element is the total size of the element, including padding and border (but not the margin).
+            Tip: Use a background color and a text color that makes the text easy to read.
+            "color:value" sets the text color of the element whereas the "background-color: value" sets the background color for that element.
+        */
+
+        .second {
+            width: 100%;
+            height: 900px;
+            background-color: aqua;
+            background-image: url("../../../html learning/image-1.jpg");
+        }
+        /*
+            If the container width or height is larger than the image which we are getting as the background-image then the image will start to repeat itself to occupy the full width and height if the container. It is the default behaviour
+        */
+
+        .second {
+            /* background-repeat: no-repeat; */
+            background-repeat: round;
+        }
+        /*
+            if we set the backgrounf-repeat value to no-repeat then the image will not repeat and will occupy the space in the left most side and at start of the div.
+            There are other values also which we can apply such as repeat-x, repeat-y
+            background-repeat:space -> The background-image is repeated as much as possible without clipping. The first and last image is pinned to either side of the element, and whitespace is distributed evenly between the images.
+            background-repeat: round -> The background-image is repeated and squished or stretched to fill the space (no gaps)
+        */
+
+        .second {
+            background-attachment: fixed;
+        }
+        /*
+            The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.
+            By default its value is set to scroll
+            To make it fixed we need to set the background-attachment: fixed
+        */
+
+        .third {
+            width: 100%;
+            height: 600px;
+            background-color: antiquewhite;
+            background-image: url("../../../html learning/image-1.jpg");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        /*
+            The background-position property sets the starting position of a background image.
+            left top
+            left center
+            left bottom
+            right top
+            right center
+            right bottom
+            center top
+            center center
+            center bottom
+            If you only specify one keyword, the other value will be "center"
+        */
+
+
+        /*
+            CSS background - Shorthand property
+            To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+        */
+
+        .fourth {
+            width: 100%;
+            height: 600px;
+            background: #d19797 url("../../../html learning/image-1.jpg") no-repeat fixed left bottom;
+        }
+
+        /*
+            When using the shorthand property the order of the property values is:
+            background-color
+            background-image
+            background-repeat
+            background-attachment
+            background-position
+            It does not matter if one of the property values is missing, as long as the other ones are in this order. Note that we do not use the background-attachment property in the examples above, as it does not have a value. The order of values need not to be same as written in the above example.
+        */
+
+    </style>
+</head>
+<body>
+    <div class="first">
+        I am text content in the DIV
+    </div>
+
+    <div class="second"></div>
+
+    <div class="third"></div>
+
+    <div class="fourth">
+
+    </div>
+    
+</body>
+</html>
