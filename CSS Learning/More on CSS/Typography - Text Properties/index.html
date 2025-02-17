@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - Text Properties</title>
+
+    <style>
+
+        h1 {
+            color: brown;
+        }
+        /*
+            sets the color to the text of that element to which it is applied
+        */
+
+        h2 {
+            text-decoration: underline red;
+        }
+        /*
+            The text-decoration property specifies the decoration added to text, and is a shorthand property for:
+            text-decoration-line (required)
+                    text-decoration-line: none|underline|overline|line-through|inherit;
+                    none	        Default value. Specifies no line for the text-decoration
+                    underline	    Specifies that a line will be displayed under the text
+                    overline	    Specifies that a line will be displayed over the text
+                    line-through	Specifies that a line will be displayed through the text
+                    inherit	        Inherits this property from its parent element.
+            text-decoration-color : Sets the color of the text decoration | Takes the text color by default.
+            text-decoration-style : Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)
+            text-decoration-thickness : Sets the thickness of the decoration line
+        */
+
+        h1 {
+            text-align: center;
+        }
+        /*
+            The text-align property specifies the horizontal alignment of text in an element.
+            text-align: left|right|center|justify;
+            left	    Aligns the text to the left	
+            right	    Aligns the text to the right	
+            center	    Centers the text	
+            justify	    Stretches the lines so that each line has equal width (like in newspapers and magazines)
+        */
+
+        .text-3 {
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+        /*
+            text-transform: value
+            The text-transform property controls the capitalization of text.
+            text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
+            The initial keyword is used to set a CSS property to its default value.
+        */
+
+        /*
+            word-spacing: value
+            word-spacing: 10px;
+            word-spacing property increases or decreases the white space between words of the element.
+        */
+
+        .p1 {
+            text-shadow: 2px 3px 5px;
+        }
+
+        /*
+            The text-shadow property adds shadow to text.
+            text-shadow: h-shadow v-shadow blur-radius color;
+            h-shadow	    Required. The position of the horizontal shadow. Negative values are allowed	
+            v-shadow	    Required. The position of the vertical shadow. Negative values are allowed	
+            blur-radius	    Optional. The blur radius. Default value is 0
+            color           Optional. The color of the shadow.
+        */
+        
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World Again</h2>
+    <h3 class="text-3">How are you ?</h3>
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+    
+</body>
+</html>
