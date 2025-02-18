@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - Font Properties</title>
+
+    <style>
+
+        p {
+            font-size: 24px;
+        }
+        /* font-size: value; is used to set the font size of the text content of an HTML element */
+
+        /*
+            The value can be of different type depending on the requirement. Below are the some examples 
+            absolute-size values 
+            font-size: xx-small;   -  size 60% the size of medium.
+            font-size: x-small;   -  size 75% the size of medium.
+            font-size: small;   -  size 89% the size of medium.
+            font-size: medium;   -  user's preferred font size and is usually around 16 pixels.
+            font-size: large;   -  size 20% larger than medium.
+            font-size: x-large;   -  size 50% larger than medium.
+            font-size: xx-large;   -  size twice the size of medium.
+            font-size: xxx-large;   -  size three times the size of medium.
+
+            relative-size values : The font will be larger or smaller relative to the parent element's font size.
+            font-size: smaller;  -  one size smaller than the inherited size.
+            font-size: larger;  -  one size larger than the inherited size.
+            font-size: 0.8em;  -  1em = 16px, em unit is relative to the font size of its parent element.
+            font-size: 1.2rem  -  The rem unit is relative to the font size of the root element (<html>).
+
+            length values
+            font-size: 12px;
+
+            percentage values
+            font-size: 80%; -  sets the font size 80% of the parent font size.
+        */
+
+        .font-style {
+            font-style: italic;
+            font-family: cursive;
+        }
+        /* 
+            font style - The font-style property sets whether a font should be styled with a normal, italic, or oblique face from its font-family.
+            This property has three values:
+            normal - The text is shown normally
+            italic - The text is shown in italics
+            oblique - The text is "leaning" (oblique is very similar to italic, but it is less supported)
+        */
+
+        /*
+            font shorthand property - The font property is a shorthand property for:
+            <font-style>: e.g., italic, oblique, or normal
+            <font-variant>: e.g., small-caps or normal
+            <font-weight>: e.g., bold, bolder, lighter, or numerical values like 100 to 900
+            <font-size>: e.g., 12px, 1em, large, etc.
+            <line-height> (optional): e.g., 1.5, 20px, etc.
+            <font-family>: e.g., 'Times New Roman', Arial, sans-serif, etc.
+            The font-size and font-family values are required in it. If one of the other values is missing, their default values are used.
+            It may optionally include font-style, font-variant, font-weight, font-stretch, line-height
+            font-style, font-variant and font-weight must precede font-size.
+        */
+        .font-shorthand {
+            font: italic small-caps bold 30px 'Times New Roman';
+            /* 
+                The order matters: font-style, font-variant, and font-weight must come before font-size. 
+            */
+        }
+        
+
+    </style> 
+</head>
+<body>
+    <p class="font-size">Lorem ipsum dolor sit amet.</p>
+    <p class="font-style">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="font-shorthand">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</body>
+</html>
