@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List and Table Styling</title>
+    <style>
+      li {
+        list-style-type: decimal-leading-zero;
+      }
+      /* 
+            list-style-type: "\1F44D";
+            list-style-type: trad-chinese-informal;
+            The list-style-type CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
+            Below are the some example
+                list-style-type: disc;
+                list-style-type: circle;
+                list-style-type: square;
+                list-style-type: decimal;
+                list-style-type: georgian;
+                list-style-type: trad-chinese-informal;
+        */
+
+      /*
+            li {
+                list-style-image: url("../../image-1.jpg");
+            }
+        */
+      /*
+            The list-style-image CSS property sets an image to be used as the list item marker.
+        */
+
+      li {
+        list-style-position: inside;
+      }
+      /*
+            The list-style-position CSS property sets the position of the ::marker relative to a list item.
+            list-style-position: outside;
+        */
+
+      li {
+        list-style: circle inside url("../../image-1.jpg");
+      }
+      /*
+            The list-style CSS shorthand property allows you to set all the list style properties at once.
+        */
+
+      /* ----------------- Styling Table ----------------- */
+
+      /*
+        table, th, td {
+            border: 1px solid;
+        }
+        */
+      /* 
+            To specify table borders in CSS, use the border property. 
+        */
+
+      /*
+            Notice that the table in the examples above have double borders. This is because both the table and the <th> and <td> elements have separate borders.
+        */
+
+      /*
+            The border-collapse property sets whether the table borders should be collapsed into a single border
+        */
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      /* 
+            The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
+            By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.
+        */
+      td {
+        text-align: center;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid #ddd;
+      }
+      /* 
+            Add the border-bottom property to <th> and <td> for horizontal dividers
+        */
+
+      tr:hover {
+        background-color: coral;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      th {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- List -->
+    <ul>
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Banana</li>
+      <li>Kiwi</li>
+      <li>Orange</li>
+    </ul>
+
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Priya</td>
+        <td>Sharma</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>Arun</td>
+        <td>Singh</td>
+        <td>32</td>
+      </tr>
+      <tr>
+        <td>Sam</td>
+        <td>Watson</td>
+        <td>41</td>
+      </tr>
+    </table>
+  </body>
+</html>
