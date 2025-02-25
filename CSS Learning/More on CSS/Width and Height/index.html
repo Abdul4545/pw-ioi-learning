@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width and Height</title>
+    <style>
+        /*
+            The width CSS property sets an element's width. By default, it sets the width of the content area, but if box-sizing is set to border-box, it sets the width of the border area.
+
+            The specified value of width applies to the content area so long as its value remains within the values defined by min-width and max-width.
+
+            If the value for width is less than the value for min-width, then min-width overrides width.
+            If the value for width is greater than the value for max-width, then max-width overrides width.
+        */
+
+        .first-para {
+            background-color: bisque;
+            color: red;
+            width: 150px;
+            min-width: 250px;
+        }
+
+        .second-para {
+            background-color: bisque;
+            color: red;
+            width: 350px;
+            max-width: 300px;
+        }
+
+        /*
+            The height CSS property specifies the height of an element. By default, the property defines the height of the content area. If box-sizing is set to border-box, however, it instead determines the height of the border area.
+            The min-height and max-height properties override height as above in width.
+        */
+
+        .third-para {
+            background-color: bisque;
+            color: red;
+            height: 350px;
+            max-height: 100px;
+        }
+
+        .fourth-para {
+            background-color: bisque;
+            color: red;
+            height: 350px;
+            min-height: 300px;
+        }
+
+        /*
+            The box-sizing CSS property sets how the total width and height of an element is calculated.
+
+            By default in the CSS box model, the width and height you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the width and height to arrive at the size of the box that's rendered on the screen. This means that when you set width and height, you have to adjust the value you give to allow for any border or padding that may be added.
+
+            The box-sizing property can be used to adjust this behavior:
+            content-box gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.
+
+            border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
+
+            box-sizing: border-box is the default styling that browsers use for the <table>, <select>, and <button> elements, and for <input> elements whose type is radio, checkbox, reset, button, submit, color, or search.
+        */
+
+        .container1 {
+            width: 300px;
+            border: 10px solid red;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .container2 {
+            width: 300px;
+            border: 10px solid red;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: content-box;
+        }
+
+        /* 
+            Both the containers above have the same width, padding and border properties only box-sizing value is different which is causing the width difference.
+        */
+
+    </style>
+</head>
+<body>
+
+    <p class="first-para">
+        I am first paragraph
+    </p>
+    
+    <p class="second-para">
+        I am second paragraph
+    </p>
+
+    <p class="third-para">
+        I am third paragraph
+    </p>
+
+    <p class="fourth-para">
+        I am fourth paragraph
+    </p>
+
+    <div class="container1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quas.
+    </div>
+
+    <div class="container2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, quas.
+    </div>
+    
+</body>
+</html>
