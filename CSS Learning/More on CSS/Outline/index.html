@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline Property</title>
+
+    <style>
+
+        /*
+            An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+
+            CSS has the following outline properties:
+            outline-style
+            outline-color
+            outline-width
+            outline-offset - The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+            outline - The outline CSS shorthand property sets most of the outline properties in a single declaration.
+
+            Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+        */
+
+        h1 {
+            outline-style: dashed;
+            outline-color: chocolate;
+            outline-width: 4px;
+            outline-offset: 3px;
+        }
+
+        /*
+
+            The outline-style property specifies the style of the outline, and can have one of the following values:
+
+            dotted - Defines a dotted outline
+            dashed - Defines a dashed outline
+            solid - Defines a solid outline
+            double - Defines a double outline
+            groove - Defines a 3D grooved outline
+            ridge - Defines a 3D ridged outline
+            inset - Defines a 3D inset outline
+            outset - Defines a 3D outset outline
+            none - Defines no outline
+            hidden - Defines a hidden outline
+        
+        */
+
+        h2 {
+            outline: 4px solid red;
+            /* 
+                This property is a shorthand for the following CSS properties:
+                outline-width
+                outline-style
+                outline-color
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+</body>
+</html>
