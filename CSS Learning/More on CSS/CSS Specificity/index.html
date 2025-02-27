@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificty</title>
+    <style>
+      /*
+            What is Specificity?
+            If there are two or more CSS rules that point to the same element, the selector with the highest specificity will "win", and its style declaration will be applied to that HTML element.
+
+            Think of specificity as a hierarchy that determines which style declaration is ultimately applied to an element.
+
+
+            Specificity Hierarchy
+            Every CSS selector has a position in the specificity hierarchy.
+
+            Priority	                    Example	                    Description
+            Inline style	                <h1 style="color: pink;">	Highest priority, directly applied with the style attribute
+            Id selectors	                #navbar	                    Second highest priority
+            Classes                 	    .test       	            Third highest priority, targeted using class names
+            Attributes                      [type="text"]	            Low priority, applies to attributes
+            Elements and pseudo-elements	h1, ::before, ::after	    Lowest priority, applies to HTML elements and pseudo-elements
+        */
+
+      /* Examples of Inline having more specificity than all other. */
+      .heading-1 {
+        color: blue;
+      }
+
+      #heading {
+        color: brown;
+      }
+
+      h1 {
+        color: yellow;
+      }
+
+      /* Examples of id having more specificity than all other. */
+      .heading-2 {
+        color: blue;
+      }
+
+      #heading-2 {
+        color: blueviolet;
+      }
+
+      h2 {
+        color: brown;
+      }
+
+      /* Examples of class having more specificity than all other. */
+
+      .heading-3 {
+        color: aqua;
+      }
+
+      h3 {
+        color: brown;
+      }
+
+      /* Examples of attribute having more specificity than all other. */
+      [type="text"] {
+        background-color: rgb(110, 110, 196);
+        color: white;
+      }
+
+      input {
+        background-color: brown;
+      }
+
+      /*
+        What is !important?
+        The !important rule in CSS is used to add more importance to a property/value than normal.
+        In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+      */
+
+      #para {
+        background-color: blue;
+      }
+
+      .para {
+        background-color: gray;
+      }
+
+      p {
+        background-color: red !important;
+      }
+
+      /*
+        The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code
+        Tip: It is good to know about the !important rule. You might see it in some CSS source code. However, do not use it unless you absolutely have to.
+      */
+    </style>
+  </head>
+  <body>
+    <h1 style="color: red" class="heading-1" id="heading">I am heading 1</h1>
+    <h2 class="heading-2" id="heading-2">I am Heading 2</h2>
+    <h3 class="heading-3">I am Heading 3</h3>
+    <input type="text" />
+    <h4>I am heading 4</h4>
+
+    <p id="para">I am para using ID attribute</p>
+    <p class="para">I am para using class attribute</p>
+    <p>I am simply para without any attribute</p>
+  </body>
+</html>
