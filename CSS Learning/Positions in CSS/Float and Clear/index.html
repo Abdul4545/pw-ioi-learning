@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float and Clear</title>
+
+    <style>
+      /*
+            The float property specifies whether an element should float to the left, right, or not at all.
+            Note: Absolutely positioned elements ignore the float property!
+            Note: Elements next to a floating element will flow around it.
+        */
+
+      .container-1 {
+        width: 98vw;
+        height: fit-content;
+        border: 2px solid rebeccapurple;
+      }
+
+      .container-2 {
+        width: 98vw;
+        height: fit-content;
+        border: 2px solid rebeccapurple;
+        margin-top: 10px;
+      }
+
+      .container-3 {
+        width: 98vw;
+        height: fit-content;
+        border: 2px solid rebeccapurple;
+        margin-top: 10px;
+      }
+
+      .img1 {
+        float: none;
+        height: fit-content;
+      }
+
+      .img2 {
+        float: left;
+        height: 110px;
+      }
+
+      .img3 {
+        float: right;
+        height: 110px;
+      }
+
+      /*
+            The clear property controls the flow next to floated elements.
+            The clear property specifies what should happen with the element that is next to a floating element.
+                Value	    Description	
+                none	    Default. The element is not pushed below left or right floated elements	
+                left	    The element is pushed below left floated elements	
+                right	    The element is pushed below right floated elements	
+                both	    The element is pushed below both left and right floated elements
+        */
+
+      .clear-2 {
+        clear: left;
+      }
+
+      .clear-3 {
+        clear: right;
+      }
+
+
+
+      .left-box {
+        float: left;
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        margin-right: 10px;
+      }
+      .right-box {
+        float: right;
+        width: 200px;
+        height: 100px;
+        background-color: lightcoral;
+        margin-left: 10px;
+      }
+      .footer {
+        clear: both;
+        background-color: lightgray;
+        padding: 10px;
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container-1">
+      <img src="../../image-1.jpg" alt="" class="img1" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis sequi,
+        beatae pariatur veniam id in temporibus vel ea sit ratione, ipsum,
+        commodi molestias voluptatibus sunt! Deleniti doloremque aut quia
+        provident eaque, esse temporibus architecto sint expedita exercitationem
+        fugiat aspernatur, quisquam quae mollitia voluptate vero dolor. Minima
+        iusto placeat aspernatur, quis nemo debitis sint corporis, perferendis
+        porro architecto rerum tempora, obcaecati reiciendis! Quae,
+        necessitatibus obcaecati earum quisquam atque temporibus exercitationem.
+        Iure rem, corrupti maiores, esse recusandae veniam saepe quasi iste
+        minus quis dolore libero accusantium optio iusto voluptatibus excepturi
+        molestias, assumenda quos eius laborum dolorem sint? Temporibus, ipsa.
+        Odit, non obcaecati! Fuga ipsam assumenda perferendis numquam vitae id,
+        iste mollitia ipsa? Excepturi facilis omnis a aliquam consequatur
+        aperiam iure nobis commodi dolores magni eos in quae, consequuntur
+        doloremque, cumque aut ut distinctio dicta harum. Aperiam ipsam, eaque
+        dolores nesciunt nemo id ratione neque totam odit voluptatem error
+        reiciendis laudantium sapiente doloribus.
+      </p>
+    </div>
+
+    <div class="container-2">
+      <img src="../../image-1.jpg" alt="" class="img2" />
+      <p class="clear-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis sequi,
+        beatae pariatur veniam id in temporibus vel ea sit ratione, ipsum,
+        commodi molestias voluptatibus sunt! Deleniti doloremque aut quia
+        provident eaque, esse temporibus architecto sint expedita exercitationem
+        fugiat aspernatur, quisquam quae mollitia voluptate vero dolor. Minima
+        iusto placeat aspernatur, quis nemo debitis sint corporis, perferendis
+        porro architecto rerum tempora, obcaecati reiciendis! Quae,
+        necessitatibus obcaecati earum quisquam atque temporibus exercitationem.
+        Iure rem, corrupti maiores, esse recusandae veniam saepe quasi iste
+        minus quis dolore libero accusantium optio iusto voluptatibus excepturi
+        molestias, assumenda quos eius laborum dolorem sint? Temporibus, ipsa.
+        Odit, non obcaecati! Fuga ipsam assumenda perferendis numquam vitae id,
+        iste mollitia ipsa? Excepturi facilis omnis a aliquam consequatur
+        aperiam iure nobis commodi dolores magni eos in quae, consequuntur
+        doloremque, cumque aut ut distinctio dicta harum. Aperiam ipsam, eaque
+        dolores nesciunt nemo id ratione neque totam odit voluptatem error
+        reiciendis laudantium sapiente doloribus.
+      </p>
+    </div>
+
+    <div class="container-3">
+      <img src="../../image-1.jpg" alt="" class="img3" />
+      <p class="clear-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis sequi,
+        beatae pariatur veniam id in temporibus vel ea sit ratione, ipsum,
+        commodi molestias voluptatibus sunt! Deleniti doloremque aut quia
+        provident eaque, esse temporibus architecto sint expedita exercitationem
+        fugiat aspernatur, quisquam quae mollitia voluptate vero dolor. Minima
+        iusto placeat aspernatur, quis nemo debitis sint corporis, perferendis
+        porro architecto rerum tempora, obcaecati reiciendis! Quae,
+        necessitatibus obcaecati earum quisquam atque temporibus exercitationem.
+        Iure rem, corrupti maiores, esse recusandae veniam saepe quasi iste
+        minus quis dolore libero accusantium optio iusto voluptatibus excepturi
+        molestias, assumenda quos eius laborum dolorem sint? Temporibus, ipsa.
+        Odit, non obcaecati! Fuga ipsam assumenda perferendis numquam vitae id,
+        iste mollitia ipsa? Excepturi facilis omnis a aliquam consequatur
+        aperiam iure nobis commodi dolores magni eos in quae, consequuntur
+        doloremque, cumque aut ut distinctio dicta harum. Aperiam ipsam, eaque
+        dolores nesciunt nemo id ratione neque totam odit voluptatem error
+        reiciendis laudantium sapiente doloribus.
+      </p>
+    </div>
+
+
+    <div class="left-box">Left Float</div>
+    <div class="right-box">Right Float</div>
+    <p>Content is wrapped around the floated elements.</p>
+    <div class="footer">This footer is pushed below both floated elements.</div>
+
+  </body>
+</html>
