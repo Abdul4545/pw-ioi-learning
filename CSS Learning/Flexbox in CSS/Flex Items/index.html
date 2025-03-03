@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Item - Properties</title>
+    <style>
+        /*
+            These properties apply to individual flex items, controlling their size and position inside the flex container.
+            
+            The CSS properties we use for flex items are:
+
+            order
+            flex-grow
+            flex-shrink
+            flex-basis
+            flex
+            align-self
+        */
+
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+          }
+
+        .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        /*
+            order
+            The order property specifies the order of the flex items inside the flex container.
+            The first flex item in the code does not have to appear as the first item in the layout.
+            The order value must be a number, default value is 0.
+        */
+
+        /*
+            The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+            The value must be a number, default value is 0.
+        */
+
+
+        /*
+            The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items.
+            The value must be a number, default value is 1.
+        */
+
+        .container {
+            display: flex;
+            background-color: bisque;
+            height: 120px;
+        }
+
+        .container > div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 150px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        /*
+            flex-basis : Defines the initial size of a flex item before it grows or shrinks.
+        */
+
+        /*
+            The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+        */
+
+        /*
+            align-self : Allows individual flex items to override the align-items property.
+
+            The align-self property specifies the alignment for the selected item inside the flexible container.
+            The align-self property overrides the default alignment set by the container's align-items property.
+
+            Value	    Description	
+            auto	    Default. The element inherits its parent container's align-items property, or "stretch" if it has no parent.	
+            stretch	    The element is positioned to fit the container	
+            center	    The element is positioned at the center of the container	
+            flex-start	The element is positioned at the beginning of the container	
+            flex-end	The element is positioned at the end of the container	
+            baseline	The element is positioned at the baseline of the container
+        */
+        
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div style="order: -1">2</div>
+        <div style="flex-grow: 8">3</div>
+        <div>4</div>
+    </div>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 3;">3</div>
+        <div>4</div>
+        <div style="flex-basis: 300px;">5</div>
+        <div>6</div>
+        <div style="flex: 2 2 230px;">7</div>
+        <div>8</div>
+        <div style="align-self: flex-end;">9</div>
+    </div>
+
+
+    
+</body>
+</html>
