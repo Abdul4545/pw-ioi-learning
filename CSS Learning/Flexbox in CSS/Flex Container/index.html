@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Container and Properties</title>
+    <style>
+        /*
+            Flexbox is short for the Flexible Box Layout module.
+            Flexbox is a layout method for arranging items in rows or columns.
+            Flexbox makes it easier to design a flexible responsive layout structure, without using float or positioning.
+            The CSS Flexbox Layout should be used for one-dimensional layout, with rows OR columns.
+        */
+
+        /*
+            To start using CSS Flexbox, you need to first define a flex container.
+            The flex container becomes flexible by setting the display property to flex.
+        */
+
+        .flex-container {
+            display: flex;
+            background-color: aqua;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /*
+            The CSS properties we use for the flex container are:
+            flex-direction
+            flex-wrap
+            flex-flow
+            justify-content
+            align-items
+            align-content
+        */
+
+        /*
+            The flex-direction property specifies the display-direction of flex items in the flex container.
+            The flex-direction property can have one of the following values:
+            row                      ------------------------------->
+            column                  
+            row-reverse              <-------------------------------
+            column-reverse
+        */
+
+        .flex-container {
+            flex-direction: row-reverse;
+        }
+
+
+        .flex-container-1 {
+            display: flex;
+            background-color: blueviolet;
+            margin-top: 10;
+            height: 600px;
+        }
+
+        .flex-container-1 > div {
+            width: 200px;
+            height: 100px;
+            background-color: cadetblue;
+            margin: 5px;
+            color: #f1f1f1;
+            font-size: larger;
+        }
+
+        /*
+            The flex-wrap property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
+
+            The flex-wrap property can have one of the following values:
+            nowrap
+            wrap
+            wrap-reverse
+        */
+        .flex-container-1 {
+            flex-wrap: wrap;
+        }
+
+
+        /*
+            The CSS flex-flow Property
+            The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+            .flex-container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+        */
+
+        /*
+            The justify-content property is used to align the flex items when they do not use all available space on the main-axis (horizontally).
+
+            The justify-content property can have one of the following values:
+
+            center
+            flex-start
+            flex-end
+            space-around
+            space-between
+            space-evenly
+        */
+        .flex-container-1 {
+            justify-content: center;
+        }
+
+        /*
+            The CSS align-items Property
+            The align-items property is used to align the flex items when they do not use all available space on the cross-axis (vertically).
+            The align-items property can have one of the following values:
+
+            center
+            flex-start
+            flex-end
+            stretch
+            baseline
+            normal
+        */
+        #third {
+            height: 50px;
+        }
+        .flex-container-1 {
+            align-items: baseline;
+        }
+
+        .flex-container-2 {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            height: 400px;
+            background-color: chocolate;
+            margin-top: 10px;
+        }
+
+        .flex-container-2 > div {
+            width: 200px;
+            height: 100px;
+            background-color: cadetblue;
+            margin: 5px;
+            color: #f1f1f1;
+            font-size: larger;
+        }
+        /*
+            The align-content property is used to align the flex lines.
+            The align-content property is similar to align-items, but instead of aligning flex items, it aligns the flex lines. It will work only when the flex-wrap is set to wrap or wrap reverse
+
+            The align-content property can have one of the following values:
+            center
+            stretch
+            flex-start
+            flex-end
+            space-around
+            space-between
+            space-evenly
+        */
+        .flex-container-2 {
+            align-content: center;
+            align-content: stretch;
+        }
+
+
+        /*
+            Perfect Centering
+        */
+
+        .container {
+            display: flex;
+            height: 300px;
+            background-color: blue;
+            justify-content: center;
+            align-items: center;
+
+            display: flex;
+            height: 300px;
+            background-color: DodgerBlue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container > div {
+            background-color: white;
+            color: white;
+            width: 200px;
+            height: 200px;
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+    <div class="flex-container-1">
+        <div>1</div>
+        <div>2</div>
+        <div id="third">3</div>
+        <div>4</div>
+    </div>
+
+    <div class="flex-container-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div id="fourth">4</div>
+    </div>
+
+    <div class="container">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
