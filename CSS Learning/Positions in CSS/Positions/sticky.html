@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position</title>
+    <style>
+        /*
+            position: sticky; keeps an element in place while scrolling until it reaches a threshold, then it behaves like relative.
+            A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+            position: sticky; will not work if we do not set an offset value (top, bottom, left, or right). The sticky position requires at least one offset to function properly.
+        */
+        
+        .sticky {
+            position: sticky;
+            top: 0px;
+            height: 100px;
+            color: white;
+            background-color: black;
+            font-size: larger;
+        }
+
+        .faltu {
+            height: 1000px;
+            background-color: burlywood;
+        }
+        .faltu-2 {
+            height: 1000px;
+            background-color: blueviolet;
+        }
+
+        /*
+            Fixed vs Sticky Positioning
+            Feature	                        fixed	                    sticky
+            Stays fixed while scrolling?	Yes	                        No, until threshold is reached
+            Moves with content?	            No	                        Yes, until a limit
+            Affected by parent?	            No	                        Yes
+        */
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis odit nam! Id, ullam laborum veniam sunt doloremque ex atque tenetur fugiat est amet explicabo magnam ipsa illo aliquam. Aut! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, veritatis!</p>
+    <div class="sticky">I am a sticky div</div>
+    <div class="faltu"></div>
+    <div class="faltu-2"></div>
+</body>
+</html>

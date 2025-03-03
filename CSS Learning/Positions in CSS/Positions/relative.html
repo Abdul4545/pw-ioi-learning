@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position</title>
+
+    <style>
+        /*
+            CSS positioning is a fundamental concept used to control the placement of elements on a webpage. It allows developers to determine how elements appear relative to their normal position, other elements, or the viewport.
+        */
+
+        /*
+            Benefits of Using CSS Positions
+            Enhanced Layout Control - Helps in placing elements precisely where needed.
+            Overlapping Elements - Allows elements to be stacked using z-index.
+            Fixed Navigation Bars - Keeps elements visible while scrolling.
+            Sticky Elements - Keeps elements partially fixed until scrolling reaches a threshold.
+            Flexible and Responsive Designs - Used in combination with media queries to create adaptive layouts.
+        */
+
+        /*
+            Types of CSS Positions
+            1. Static Positioning (Default)
+            By default, all elements have position: static;. This means they follow the normal document flow.
+        */
+
+        /*
+            2. Relative Positioning
+            position: relative; moves the element relative to its normal position. Other elements are not affected by this movement.
+        */
+
+        .box {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="box">This is a relative box</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nam!</p>
+</body>
+</html>
+

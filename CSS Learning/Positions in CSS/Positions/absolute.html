@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position</title>
+    <style>
+        /*
+            position: absolute; moves an element relative to its closest positioned ancestor (relative, absolute, or fixed). If there’s no such ancestor, it moves relative to the <html> element.
+        */
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: lightgray;
+        }
+        
+        .box {
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            text-align: center;
+        }
+
+        /*
+            Relative vs Absolute Positioning
+            Feature	                        relative	                absolute
+            Moves relative to	            Its original position	    Its closest positioned ancestor
+            Affects other elements?	        Yes	                        No
+            Can be used for overlays?	    No	                        Yes
+        */
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, nostrum.</p>
+    <div class="container">
+        <div class="box">Absolute Box</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam est temporibus sed quia porro perferendis obcaecati assumenda repellat aliquam.</p>  
+
+    
+</body>
+</html>
