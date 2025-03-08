@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Grid Container Properties</title>
+    <style>
+        /*
+            CSS Grid is a layout system that allows us to create complex web layouts with ease. It provides a two-dimensional grid system for placing elements in rows and columns.
+            To use CSS Grid, we apply display: grid; to a container, which then becomes a grid container. The direct child elements of this container are grid items.
+
+            CSS Grid Components
+            A grid always consists of:
+            1) Grid Container - the parent (container) <div> element
+            2) Grid Items - the items inside the container <div>
+        */
+
+        .container {
+            background-color: rgb(70, 68, 68);
+            display: grid;
+        }
+
+        .container>div {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            background-color: bisque;
+            margin: 10px;
+            font-size: larger;
+        }
+
+        /*
+            Grid Container Properties
+            These properties are applied to the grid container.
+
+            1. grid-template-columns
+            Defines the number of columns in the grid and their sizes.
+        */
+
+        .container {
+            grid-template-columns: 250px 300px;
+            gap: 10px;
+        }
+        /*
+            This creates:
+            A 250px-wide first column
+            A 300px-wide second column
+        */
+
+
+        /*
+            grid-template-rows
+            Defines the number of rows in the grid and their sizes.
+        */
+        .container {
+            grid-template-rows: 150px 180px;
+        }
+        /*
+            This creates:
+            A 150px-high first row
+            A 180px-high second row
+        */
+
+        /*
+            grid-auto-rows
+            Defines the size of rows that are automatically created when new items are added beyond the defined rows.
+        */
+
+        .container {
+            grid-auto-rows: 250px;
+        }
+
+
+        .container-1 {
+            display: grid;
+            background-color: aquamarine;
+            grid-template-columns: 350px 400px;
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+        }
+
+        .container-1 > div {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            color: white;
+        }
+
+        /*
+            grid-auto-columns
+            Defines the size of columns that are automatically created when new items are added that don't fit into explicitly defined columns.
+        */
+
+        .container-1 {
+            grid-auto-columns: 350px;
+        }
+
+        .container-1 > div:nth-child(3) {
+            grid-column: 3; /* Forces it into an auto-generated column */
+        }
+
+        /*
+            column-gap : Defines the space between columns.
+            row-gap : Defines the space between rows.
+            grid-gap (Shorthand for row-gap and column-gap)
+        */
+
+        /*
+            place-items
+            Shorthand for align-items and justify-items.
+            .container-1 {
+                place-items: center;
+            }
+        */
+
+        /*
+            justify-content
+            Controls how columns are positioned inside the grid container.
+            Possible values: start, center, end, space-between, space-around, space-evenly.
+        */
+        .container-1 {
+            justify-content: space-around;
+        }
+
+        /*
+            justify-items
+            Aligns grid items horizontally within their grid cells.
+            Possible values: start, center, end, stretch.
+        */
+        .container-1 {
+            justify-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+
+
+
+      <div class="container-1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    
+</body>
+</html>

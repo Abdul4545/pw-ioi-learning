@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Item Properties</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 300px 400px;
+            grid-template-rows: 50px 100px 150px;
+        }
+
+        /*
+            grid-column: Defines how many columns an item should span.
+            Shorthand:  
+            .item {
+                grid-column: span 3;
+            }
+        */
+        .first {
+            grid-column: 1/4;
+            /* This makes the item span from column 1 to the end of column 3. */
+            /* grid-column: span 3; */ 
+            background-color: brown;
+            height: 50px;
+            font-size: larger;
+            color: white;
+        }
+
+        /*
+            grid-row : Defines how many rows an item should span.
+            Shorthand:
+            .item {
+                grid-row: span 2;
+            }
+        */
+        .second {
+            grid-row: 2 / 4; /* This makes the item span from row 2 to the end of row 3. */
+            background-color: rgb(59, 58, 57);
+            color: white;
+        }
+
+        /*
+            grid-area : Defines a specific position for the item using row-start, column-start, row-end, column-end.
+        */
+
+        .third {
+            grid-area: 2 / 2 / 3 / 4;
+            background-color: chartreuse;
+        }
+        /*
+            This means:
+            Row start: 2
+            Column start: 2
+            Row end: 3
+            Column end: 4
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">One</div>
+        <div class="second">Two</div>
+        <div class="third">Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+    </div>
+</body>
+</html>
