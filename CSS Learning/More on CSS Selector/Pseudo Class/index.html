@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <style>
+        /*
+            Pseudo-classes in CSS allow you to apply styles to elements in a specific state or position in the document. Below is a detailed explanation of major pseudo-class along with examples.
+        */
+
+        /*
+            :active
+            This pseudo-class applies styles when an element is actively being clicked.
+        */
+        button:active {
+            background-color: red;
+            color: white;
+        }
+
+        /*
+            :hover
+            This pseudo-class applies styles when the mouse is hovering over an element.
+        */
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+
+        /*
+            :focus
+            This pseudo-class applies styles when an element (like an input field) is focused.
+        */
+        input:focus {
+            background-color: rgb(209, 207, 197);
+            border: 2px solid blue;
+        }
+
+        /*
+            :visited
+            This pseudo-class applies styles to links that have been visited.
+        */
+        a:visited {
+            color: rgb(156, 137, 137);
+        }
+
+        /*
+            :first-child
+            This pseudo-class applies styles to the first child of a parent.
+        */
+        p:first-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        /*
+            :last-child
+            This pseudo-class applies styles to the last child of a parent.
+        */
+        p:last-child {
+            color: blue;
+            font-style: italic;
+        }
+
+        /*
+            :nth-child(n)
+            This pseudo-class applies styles to the nth child.
+        */
+        li:nth-child(2) {
+            color: green;
+        }
+
+        /*
+            :nth-last-child(n)
+            This pseudo-class applies styles to the nth child from the end.
+        */
+        li:nth-last-child(1) {
+            color: orange;
+        }
+
+        /*
+            :not(selector)
+            This pseudo-class applies styles to all elements except the specified selector.
+        */
+        h3:not(.special) {
+            color: gray;
+        }
+
+        /*
+            :checked
+            This pseudo-class applies styles to checked inputs (radio, checkbox).
+        */
+        input:checked {
+            outline: 2px solid green;
+        }
+
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+    <br><br>
+    <a href="#">Hover over me</a>
+    <br><br>
+    <input type="text" placeholder="Click to focus">
+    <br><br>
+    <a href="https://www.google.com">Visited Link</a>
+    <div>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+
+    <h3>Normal paragraph.</h3>
+    <h3 class="special">This one is special.</h3>
+
+    <p></p>
+    <input type="checkbox"> Check me
+</body>
+</html>
