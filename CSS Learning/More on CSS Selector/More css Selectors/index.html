@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator & Attribute Selectors</title>
+    
+    <style>
+        /*
+            CSS selectors are used to target HTML elements for styling. Among them, combinator selectors define relationships between elements, while attribute selectors target elements based on their attributes.
+        */
+
+        /*
+
+            Combinator Selectors
+            Combinator selectors define relationships between elements. There are four main combinators:
+
+            1.1 Descendant Selector (space)
+            The descendant selector ( , a space) selects all elements that are nested inside a specified ancestor, no matter how deep they are.
+        */
+        .mydiv p {
+            color: blue;
+        }
+
+
+        /*
+            1.2 Child Selector (>)
+            The child selector (>) selects only the direct children of the specified parent.
+        */
+        .mydiv-2 > p {
+            color: green;
+        }
+        
+
+        /*
+            Adjacent Sibling Selector (+)
+            The adjacent sibling selector (+) selects an element that is immediately after another element.
+        */
+        h1 + p {
+            color: red;
+            font-size: 20px;
+        }
+
+        /*
+            General Sibling Selector (~)
+            The general sibling selector (~) selects all elements that are siblings of a specified element (not just the immediate one).
+        */
+        h2 ~ p {
+            color: purple;
+        }
+        
+        /*
+            Attribute Selectors
+            Attribute selectors target elements based on the presence or value of attributes.
+
+            Select Elements with a Specific Attribute ([attribute])
+            Selects elements that have a particular attribute.
+        */
+
+        input[required] {
+            border: 2px solid red;
+            margin: 4px;
+        }
+
+        /*
+            Select Elements with a Specific Attribute Value ([attribute="value"])
+            Selects elements where the attribute has an exact value.
+        */
+        input[type="password"] {
+            background-color: yellow;
+            margin: 4px;
+        }
+
+        /*
+            Select Elements Where Attribute Value Starts with a Certain String ([attribute^="value"])
+            Selects elements where the attribute value starts with a given string.
+        */
+        a[href^="https://"] {
+            color: green;
+        }
+
+        /*
+            Select Elements Where Attribute Value Ends with a Certain String ([attribute$="value"])
+            Selects elements where the attribute value ends with a given string.
+        */
+
+        img[src$=".jpg"] {
+            border: 5px solid blue;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <h3>1 - Descendant Selector (space)</h3>
+    <div class="mydiv">
+        <p>This paragraph will be blue.</p>
+        <section>
+            <p>This paragraph inside a section will also be blue.</p>
+        </section>
+    </div>
+    <p>This paragraph outside the div is not affected.</p>
+
+    <h3>2 - Child Selector</h3>
+    <div class="mydiv-2">
+        <p>This paragraph will be green.</p>
+        <section>
+            <p>This paragraph will not be affected.</p>
+        </section>
+    </div>
+
+    <h3>3 - Adjacent Sibling Selector</h3>
+    <h1>Heading</h1>
+    <p>This paragraph will be red.</p>
+    <p>This paragraph will not be red.</p>
+
+    <h3>General Sibling Selector (~)</h3>
+    <h2>Heading</h2>
+    <p>This paragraph will be purple.</p>
+    <p>This paragraph will also be purple.</p>
+
+    <input type="text" required>
+    <br>
+    <input type="text">
+    <br>
+    Password : <input type="password" >
+    <br><br>
+    <a href="https://example.com">Secure Link</a>
+    <a href="http://example.com">Not Secure</a>
+
+    <br>
+    <br>
+    <img src="image-1.jpg">
+    <img src="icon.png">
+
+</body>
+</html>
