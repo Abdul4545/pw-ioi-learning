@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design</title>
+    <style>
+      /*
+            What is Responsive Web Design (RWD)?
+            Responsive Web Design (RWD) is an approach to web development that ensures a website looks good and functions well on all devices, regardless of screen size. This means adapting the layout, images, and other elements dynamically based on the screen width, height, resolution, and other characteristics.
+        */
+
+      /*
+            What are Media Queries?
+            Media Queries are a key feature of CSS that allow you to apply styles based on the characteristics of the device, such as its width, height, resolution, and orientation. They help in creating responsive web designs by adjusting styles for different devices.
+        */
+
+      /*
+            Syntax of Media Queries:
+            A media query consists of:
+            1) @media keyword
+            2) A media type (like screen, print, all)
+            3) A media feature (like max-width, min-width, orientation)
+            4) CSS rules inside {}
+        */
+
+      /*
+            Media queries support different media types that determine when the styles should be applied. The most common ones are:
+
+            screen → Used for devices with screens (default for web pages).
+            print → Used for styling content specifically for printing.
+            all → Applies to both screen and print (default behavior if no media type is specified).
+
+            Using print in Media Queries
+            The print media type is useful when you want to adjust styles for printing, such as:
+
+            Hiding unnecessary elements (like navigation, ads, videos).
+            Changing text color to black for better readability.
+            Adjusting layouts for paper format (e.g., converting multi-column layouts to a single column).
+
+            Media Type	    When to Use
+            screen	        When designing styles for web pages on desktops, tablets, and mobile devices.
+            print	          When you want to optimize a webpage for printing (hide elements, adjust fonts, etc.).
+            all	            When you want styles to apply in both screen and print without restrictions.
+      */
+
+      /*
+            Here are some common breakpoints used in responsive web design:
+
+            Extra Small Devices (Phones, up to 576px)
+            Small Devices (Tablets, 577px - 768px)
+            Medium Devices (Laptops, 769px - 992px)
+            Large Devices (Desktops, 993px - 1200px)
+            Extra Large Devices (Large Screens, above 1200px)
+        */
+
+      /* Default Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: lightgray;
+      }
+
+      header {
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+      }
+
+      /* Responsive Styles */
+
+      /* For small devices (phones, up to 576px) */
+      @media screen and (max-width: 576px) {
+        body {
+          background-color: lightcoral;
+        }
+        header {
+          font-size: 16px;
+        }
+      }
+
+      /* For tablets (577px - 768px) */
+      @media screen and (min-width: 577px) and (max-width: 768px) {
+        body {
+          background-color: lightgreen;
+        }
+        header {
+          font-size: 20px;
+        }
+      }
+
+      /* For laptops (769px - 992px) */
+      @media screen and (min-width: 769px) and (max-width: 992px) {
+        body {
+          background-color: lightblue;
+        }
+        header {
+          font-size: 24px;
+        }
+      }
+
+      /* For desktops (993px - 1200px) */
+      @media screen and (min-width: 993px) and (max-width: 1200px) {
+        body {
+          background-color: lightyellow;
+        }
+        header {
+          font-size: 28px;
+        }
+      }
+
+      /* For large screens (above 1200px) */
+      @media screen and (min-width: 1201px) {
+        body {
+          background-color: lightgray;
+        }
+        header {
+          font-size: 32px;
+        }
+      }
+
+      /*
+            Explanation:
+            The default styles are applied to all devices unless overridden by a media query.
+            Media queries check the screen width and apply styles accordingly.
+            Different background colors and font sizes are applied for different screen sizes to demonstrate the effect of media queries.
+      */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Web Design</h1>
+    </header>
+    <main>
+      <section class="content">
+        <p>This is a responsive webpage using media queries.</p>
+      </section>
+    </main>
+  </body>
+</html>
