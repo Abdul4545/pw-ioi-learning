@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        /*
+            Pseudo-elements in CSS
+            Pseudo-elements in CSS allow you to style specific parts of an element without adding extra HTML elements. They are prefixed with :: (double colons), though some browsers also support : (single colon) for backward compatibility.
+        */
+
+        /*
+            ::after
+            This pseudo-element inserts content after the element.
+            It is commonly used for adding icons, decorative elements, or text.
+            Requires content property.
+        */
+        button::after {
+            content: " →";
+            color: red;
+        }
+        
+        /*
+            ::before
+            Similar to ::after, but inserts content before the element.
+        */
+        h1::before {
+            content: "🔥 ";
+        }
+
+        /*
+            ::first-letter
+            Styles the first letter of a block-level element.
+        */
+        p::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: blue;
+        }
+
+        /*
+            ::first-line
+            Styles the first line of a block-level element.
+            Works best with block elements like <p>.
+        */
+        h4::first-line {
+            font-weight: bold;
+            color: green;
+        }
+
+        /*
+            ::selection
+            Styles the selected text when the user highlights it.
+        */
+        h3::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+        /*
+            ::placeholder
+            Styles the placeholder text inside input fields.
+        */
+        input::placeholder {
+            color: gray;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <button>Click Here</button>
+    <h1>Important Notice</h1>
+    <p>This is a paragraph example.</p>
+    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat blanditiis tenetur illo autem odio alias molestiae obcaecati tempora ad sit. Quo ratione repudiandae nesciunt magnam minima unde vero. Maxime est quisquam, impedit numquam sint non quam saepe odio esse iure accusantium? Quos error eligendi quasi.</h4>
+
+    <h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum aliquam reprehenderit ab non odio perferendis exercitationem quos architecto officiis? Ea minima dolores rem explicabo quam laborum beatae similique quaerat error dolorum excepturi animi veritatis rerum, deserunt cupiditate provident, velit vel non natus cum nisi.
+    </h3>
+
+    <input type="text" placeholder="Enter your name">
+</body>
+</html>
